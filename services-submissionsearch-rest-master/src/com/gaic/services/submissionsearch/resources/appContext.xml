@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!-- CPR -->
+    <bean id="propPlaceholderConfigurer" parent="cprPropertyPlaceholderConfigurer">
+        <property name="placeholderPrefix" value="$submissionSearch{" />
+        <property name="namespace" value="com.gaic.services.submissionSearch" />
+    </bean>
+
+    <bean id="submissionSearchBl" class="com.gaic.services.submissionsearch.bl.SubmissionSearchBl" />
+</beans>
